@@ -18,7 +18,7 @@ exports.createUser = (req, res, next) => {
   };
 
   dbConnection.pool.query(
-    "INSERT INTO usuario (nombre, apellido, edad, correo, contrasena) VALUES ($1, $2, $3, $4, $5) ",
+    "INSERT INTO usuario (id, nombre, apellido, edad, correo) VALUES ($1, $2, $3, $4, $5) ",
     Object.values(data),
     (error, resp) => {
       if (error) {
